@@ -1,19 +1,16 @@
 Revelations,Check,Source documents & publications,Intelligence agencies,Countries,Authorisation for surveillance,Codename of surveillance programme(s),Type of surveillance,Type of data collected,Data collection source
-FISA Court Order Demanding US call records from Verizon,,https://freesnowden.is/revelations#fisa-court-order-demanding-us-call-records ,NSA,US,,,,,
-PRISM: an NSA partnership with US service providers,,https://freesnowden.is/revelations#prism-an-nsa-partnership-with-us-service-providers ,NSA,Global,,,,,
-Presidential Directive orders cyber-offensive targeting overseas,,https://freesnowden.is/revelations#presidential-directive-orders-cyber-offensive-targeting-overseas ,NSA,Global,,,,,
-Boundless Informant illustrates NSA's global reach,,https://freesnowden.is/revelations#boundless-informant ,NSA,Global,,,,,
-"NSA targets universities, mobile phones and fibre-optic network in China",,https://freesnowden.is/revelations#nsa-targets-universities-mobile-phones-in-China ,NSA,China,,,,,
-How NSA decides what counts as US data,,https://freesnowden.is/revelations#faa-targeting-and-minimization ,NSA,US,,,,,
-GCHQ's cable-tapping Tempora operation,,https://freesnowden.is/revelations#gchq-tempora-porgramme ,GCHQ,Global,,,,,
-Internal investigation of post-9/11 warrantless wiretapping,,https://freesnowden.is/revelations#internal-investigation-of-post-9/11-warrantless-wiretapping-program ,NSA,US,,,,,
-Authorisation for NSA analysis of US-based electronic metadata,,https://freesnowden.is/revelations#authorization-for-nsa-analysis ,NSA,US,,,,,
-Extended data collection: EvilOlive and ShellTrumpet,,https://freesnowden.is/revelations#extended-data-collection ,NSA,US,,,,,
-PRISM data acquisition,,https://freesnowden.is/revelations#prism-data-aquisition ,"NSA, FBI, CIA",Global,,,,,
-"Large scale NSA activity in Germany, with domestic cooperation",,https://freesnowden.is/revelations#nsa-in-germany ,"NSA, BND",Germany,,,,,
-XKeyScore – the NSA search tool for “nearly everything”,,https://freesnowden.is/revelations#xkeyscore-the-nsa-search-tool-for-nearly-everything ,NSA,Global,,,,,
-NSA Section 702: targeting US persons,,https://freesnowden.is/revelations#nsa-section-702-targeting-us-persons ,NSA,US,,,,,
-NSA auditing and the FISC Opinion,,https://freesnowden.is/revelations#nsa-auditing-and-the-fisc-opinion ,NSA,US,,,,,
+FISA Court Order Demanding US call records from Verizon,done,https://freesnowden.is/revelations#fisa-court-order-demanding-us-call-records ,"NSA, FBI",US,FISA Court order,,Data collection,Calls records,Verizon
+PRISM: an NSA partnership with US service providers,done,https://freesnowden.is/revelations#prism-an-nsa-partnership-with-us-service-providers ,NSA,Global,FISA Amendments Act 2008,PRISM,"Data collection, Data mining, Access to stored communications","Emails, chats, videos, file transfers, photos, stored data, VoIP, video conferencing, logins, online social networking details","Directly from the servers of Microsoft, Google, Apple, Facebook, Yahoo, AOL, PalTalk, Skype, YouTube"
+Boundless Informant illustrates NSA's global reach,done,https://freesnowden.is/revelations#boundless-informant ,NSA,Global,FISA Amendments Act 2008,Boundless Informant,"Data collection, Data mining",Communications metadata,Computer and telephone networks
+GCHQ's cable-tapping Tempora operation,done,https://freesnowden.is/revelations#gchq-tempora-porgramme ,GCHQ,Global,Regulation of Investigatory Powers Act (RIPA),Tempora,Interception of communications,"Emails, chats, videos, instant messages, photos, browsing history, calls and text messages",Fibre-optic cables
+Internal investigation of post-9/11 warrantless wiretapping,done,https://freesnowden.is/revelations#internal-investigation-of-post-9/11-warrantless-wiretapping-program ,NSA,Global,"Business Records Order, Foreign Content Order, Domestic Content Order, FISA Amendments Act 2008",STELLARWIND,"Bulk data collection, Wiretapping, Metadata and content analysis","Email records, Content and associated metadata of telephony and internet communications","Fibre-optic cables, gateway switches, data networks, “Chokepoints” in the international telephone switching system"
+Authorisation for NSA analysis of US-based electronic metadata,done,https://freesnowden.is/revelations#authorization-for-nsa-analysis,NSA,US,FISA Amendments Act 2008,,Metadata analysis by “contact chaining”,"Email records, IP addresses, Telephone numbers","Fibre-optic cables, gateway switches, data networks, “Chokepoints” in the international telephone switching system"
+Extended data collection: EvilOlive and ShellTrumpet,done,https://freesnowden.is/revelations#extended-data-collection ,NSA,US,FISA Amendments Act 2008,"EvilOlive, ShellTrumpet","Collection of internet traffic, Near real-time metadata analysis, Performance monitoring, Direct email tip alterting","Internet traffic, Email records, Internet metadata ","Fibre-optic cables, gateway switches, data networks"
+PRISM data acquisition,done,https://freesnowden.is/revelations#prism-data-aquisition ,"NSA, FBI, CIA",Global,FISA Amendments Act 2008,"PRISM, Upstream","Data collection, Data mining, Access to stored communications","Emails, chats, videos, file transfers, photos, stored data, VoIP, video conferencing, logins, online social networking details","PRISM: Directly from the servers of Microsoft, Google, Apple, Facebook, Yahoo, AOL, PalTalk, Skype, YouTube. Upstream: Fibre-optic cables "
+"Large scale NSA activity in Germany, with domestic cooperation",done,https://freesnowden.is/revelations#nsa-in-germany ,"NSA, BND",Germany,FISA Amendments Act 2008,Boundless Informant,"Data collection, Processing of connection data from telephone calls in “near real time”","Metadata of telephone calls, emails, text messages and chat transcripts",Computer and telephone networks
+XKeyScore – the NSA search tool for “nearly everything”,done,https://freesnowden.is/revelations#xkeyscore-the-nsa-search-tool-for-nearly-everything ,NSA,Global,FISA Amendments Act 2008,XkeyScore,"Content data and metadata collection, Searches “nearly everything a user does on the internet”, Data mining","Content and metadata of emails, Social media activity, browsing history, online chats","Fibre-optic cables, gateway switches, data networks"
+NSA Section 702: targeting US persons,done,https://freesnowden.is/revelations#nsa-section-702-targeting-us-persons ,NSA,US,Fisa Amendments Act (FAA) Section 702,,"Data collection, Search of databases for specific US individuals' communications","Phone calls, Emails","Service providers, computer and telephone networks"
+NSA auditing and the FISC Opinion,,https://freesnowden.is/revelations#nsa-auditing-and-the-fisc-opinion ,NSA,US,,,"Interception of communications, ",,
 US Intelligence Community Budget for 2013,,https://freesnowden.is/revelations#us-intelligence-community-budget ,N/A,US,,,,,
 Smartphone surveillance,,https://freesnowden.is/revelations#smartphone-surveillance ,"NSA, GCHQ",Global,,,,,
 India a top target,,https://freesnowden.is/revelations#india-a-top-target ,NSA,India,,,,,
@@ -25,9 +22,8 @@ NSA and GCHQ break into Yahoo and Google data centres,,https://freesnowden.is/re
 Venezuela named as a key NSA target,,https://freesnowden.is/revelations#venezuela-named-as-a-key-nsa-target ,NSA,Venezuela,,,,,
 Thirty three million Norwegian phone calls logged,,https://freesnowden.is/revelations#thirty-three-million-norwegian-phone-calls-logged ,NSA,Norway,,,,,
 NSA retains information on UK citizens,,https://freesnowden.is/revelations#nsa-retains-information-on-uk-citizens ,NSA,UK,,,,,
-NSA collects data “against” countries,Maybe?,https://freesnowden.is/revelations#nsa-collects-data-against-countries ,NSA,"Norway, Afghanistan",,,,,
-NSA's ambitious four-year goals,Maybe?,https://freesnowden.is/revelations#nsas-ambitious-four-year-goals ,NSA,Global,,,,,
-The Netherlands an NSA target since 1946,Maybe?,https://freesnowden.is/revelations#the-netherlands-an-nsa-target-since-1946 ,NSA,The Netherlands,,,,,
+NSA collects data “against” countries,,https://freesnowden.is/revelations#nsa-collects-data-against-countries ,NSA,"Norway, Afghanistan",,,,,
+NSA's ambitious four-year goals,,https://freesnowden.is/revelations#nsas-ambitious-four-year-goals ,NSA,Global,,,,,
 Microsoft data centres may also have been NSA targets,,https://freesnowden.is/revelations#microsoft-data-centres-may-also-have-been-nsa-targets ,NSA,Global,,,,,
 CSEC's methodology explained,,https://freesnowden.is/revelations#csecs-methodology-explained ,CSEC,Canada,,,,,
 Australia offered to share citizens' data with the NSA,,https://freesnowden.is/revelations#australia-offered-to-share-citizens-data-with-the-nsa ,"ASD, NSA",Australia,,,,,
@@ -78,8 +74,7 @@ NSA penetrated North Korean networks in 2010,,https://freesnowden.is/revelations
 Canada monitoring millions of file downloads every day,,https://freesnowden.is/revelations#canada-monitoring-millions-file-downloads-every-day ,,,,,,,
 How Five Eyes Agencies rely on Hackers,,https://freesnowden.is/revelations#how-five-eyes-agencies-rely-hackers ,,,,,,,
 CSE collects and retains hundreds of thousands of Canadian emails every day,,https://freesnowden.is/revelations#cse-collects-retains-hundreds-thousands-canadian-emails ,,,,,,,
-New Zealand spying on its neighbourhood for the Five Eyes,Maybe?,https://freesnowden.is/revelations#new-zeland-spying-neighbourhood-five-eyes ,,,,,,,
-Inside Ironsand: New Zealand's Five Eyes spy base,Maybe?,https://freesnowden.is/revelations#inside-ironsand ,,,,,,,
+Inside Ironsand: New Zealand's Five Eyes spy base,,https://freesnowden.is/revelations#inside-ironsand ,,,,,,,
 CIA researchers working to defeat Apple encryption,,https://freesnowden.is/revelations#cia-researchers-working-to-defeat-apple-encryption ,,,,,,,
 "UK launched “long-running, large scale, pioneering” information operation against Argentina",Maybe?,https://freesnowden.is/revelations#uk-launched-information-operation-argentina ,,,,,,,
 New Zealand spies on – and with – Bangladesh,Maybe?,https://freesnowden.is/revelations#new-zealand-spies-on-with-bangladesh ,,,,,,,
