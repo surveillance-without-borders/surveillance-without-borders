@@ -1,7 +1,10 @@
-# cloak-and-dagger
+# Cloak and Dagger (CnD)
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.14.0.
+This project aggregates, organises and visualises information from leaked documents on surveillance. 
+
+Its goal is to serve as a resource for researchers, political analysts, advocates, activists, digital security trainers and for the public at large. 
+
+More info coming soon. 
 
 ## Build & development
 
