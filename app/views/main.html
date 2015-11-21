@@ -1,3 +1,55 @@
-<div class="row">
-    <datamap map="mapObject"></datamap>
+<div class="row info-box" ng-hide="infoBox" ng-switch="selectedCategory">
+    <div ng-switch-when="Leaders">
+        <h4>Political leaders under surveillance</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <div ng-switch-when="Corporate collaboration">
+        <h4>Collaboration between intelligence agencies and companies</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <div ng-switch-when="Intelligence">
+        <h4>Collaboration between intelligence agencies</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <div ng-switch-when="Corporations">
+        <h4>Corporations under surveillance</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <div ng-switch-when="Mass">
+        <h4>Mass surveillance of citizens</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <div ng-switch-when="Targeted">
+        <h4>Targeted surveillance of citizens</h4>
+        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+    </div>
+    <p>Click on the map to get started</p>
 </div>
+
+<div class="row info-box" ng-show="infoBox">
+    <div class="item" ng-repeat="(key, value) in geoData[0]">
+        <h4>{{key}}</h4>
+        <p>{{value}}</p>
+    </div>
+    <div class="scroll-helper">
+        <div class="scroll-down-arrow">
+            <span class="glyphicon glyphicon-menu-down down-arrow" aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="navbar">
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" ng-click="openPanel('Leaders')">Leaders</button>
+          <button type="button" class="btn btn-default" ng-click="openPanel('Corporate collaboration')">Corporate collaboration</button>
+          <button type="button" class="btn btn-default" ng-click="openPanel('Intelligence')">Intelligence</button>
+          <button type="button" class="btn btn-default" ng-click="openPanel('Corporations')">Corporations</button>
+          <button type="button" class="btn btn-default" ng-click="openPanel('Mass')">Mass</button>
+          <button type="button" class="btn btn-default" ng-click="openPanel('Targeted')">Targeted</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <datamap map="mapObject" on-click="updateActiveGeography"></datamap>
+</div>
+

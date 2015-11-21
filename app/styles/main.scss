@@ -89,3 +89,24 @@ body {
     border-bottom: 0;
   }
 }
+
+.info-box {
+     height: 150px;
+     overflow: scroll;
+     position: relative;
+}
+
+.scroll-helper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+.scroll-down-arrow {
+    position: relative;
+    width: 100%;
+}
+.scroll-down-arrow span {
+    position: absolute;
+    right: 0;
+}
