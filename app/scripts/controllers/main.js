@@ -8,10 +8,12 @@
  * Controller of the cloakAndDaggerApp
  */
 angular.module('cloakAndDaggerApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', function ($scope) {
+    $scope.mapObject = {
+        scope: 'world',
+        options: {
+            height: 400,
+            legendHeight: 60 // optionally set the padding for the legend
+        },
+    }
+  }]);

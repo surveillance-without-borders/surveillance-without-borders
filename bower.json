@@ -9,7 +9,9 @@
     "angular-resource": "^1.4.0",
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
-    "angular-touch": "^1.4.0"
+    "angular-touch": "^1.4.0",
+    "datamaps": "~0.4.0",
+    "angular-datamaps": "~0.1.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
