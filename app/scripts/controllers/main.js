@@ -10,15 +10,16 @@
 angular.module('cloakAndDaggerApp')
   .controller('MainCtrl', ['$scope', '$rootScope', '$http',
               function ($scope, $rootScope, $http) {
-    var countryMapping = {},
-        csvToCategory = {
+    var csvToCategory = {
             "Leaders": 'data/Politicians-processed.csv',
             "Corporate collaboration": 'data/CollaborationIAC-processed.csv',
             "Intelligence": 'data/CollaborationINT-processed.csv',
             "Corporations": 'data/Corporations-processed.csv',
             "Mass": 'data/PubMASS-processed.csv',
             "Targeted": 'data/PubTARGETED-processed.csv'
-    };
+    },
+        countryMapping = {},
+        loadedCategories = [];
     function loadMap(category) {
         $http.get(csvToCategory[category]).then(function(response) {
             var countryColors = {};
@@ -26,10 +27,16 @@ angular.module('cloakAndDaggerApp')
                 angular.forEach(row['Countries'].split(","), function(country) {
                     country = country.replace(/^\s+/g, '');
                     if (typeof countryMapping[country] === 'undefined') {
-                        countryMapping[country] = [];
+                        countryMapping[country] = {}
+                    }
+                    if (typeof countryMapping[country][category] === 'undefined') {
+                        countryMapping[country][category] = [];
                     }
                     if (country.match(/^[A-Z]+$/)) {
-                        countryMapping[country].push(row);
+                        // XXX This is super ghetto
+                        if (loadedCategories.indexOf(category) == -1) {
+                            countryMapping[country][category].push(row);
+                        }
                         countryColors[country] = {
                             "fillKey": "EXISTS"
                         };
@@ -48,6 +55,7 @@ angular.module('cloakAndDaggerApp')
                 },
                 data: countryColors
             };
+            loadedCategories.push(category);
         });
     }
 
@@ -62,7 +70,7 @@ angular.module('cloakAndDaggerApp')
     $scope.updateActiveGeography = function(geo) {
         $scope.selectedCountry = geo.properties.name;
         $scope.infoBox = true;
-        $scope.geoData = countryMapping[geo.id];
+        $scope.geoData = countryMapping[geo.id][$scope.selectedCategory];
         $scope.$apply();
     };
     $scope.openPanel("Leaders");
