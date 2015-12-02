@@ -15,6 +15,8 @@
         <h4>Corporations under surveillance</h4>
         <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
     </div>
+    <!--
+    These are currently disabled. If you are interested in making them a reality please contribute :)
     <div ng-switch-when="Mass">
         <h4>Mass surveillance of citizens</h4>
         <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
@@ -22,34 +24,38 @@
     <div ng-switch-when="Targeted">
         <h4>Targeted surveillance of citizens</h4>
         <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
-    </div>
+        </div>
+    --!>
     <p>Click on the map to get started</p>
 </div>
 
-<div class="row info-box" ng-show="infoBox">
-    <div class="item" ng-repeat="(key, value) in geoData[0]">
-        <h4>{{key}}</h4>
-        <p>{{value}}</p>
-    </div>
-    <div class="scroll-helper">
-        <div class="scroll-down-arrow">
-            <span class="glyphicon glyphicon-menu-down down-arrow" aria-hidden="true"></span>
-        </div>
-    </div>
-</div>
 <div class="row">
     <div class="navbar">
         <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default" ng-click="openPanel('Leaders')">Leaders</button>
-          <button type="button" class="btn btn-default" ng-click="openPanel('Corporate collaboration')">Corporate collaboration</button>
-          <button type="button" class="btn btn-default" ng-click="openPanel('Intelligence')">Intelligence</button>
-          <button type="button" class="btn btn-default" ng-click="openPanel('Corporations')">Corporations</button>
-          <button type="button" class="btn btn-default" ng-click="openPanel('Mass')">Mass</button>
-          <button type="button" class="btn btn-default" ng-click="openPanel('Targeted')">Targeted</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Leaders'}" ng-click="openPanel('Leaders')">Leaders</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Corporate collaboration'}" ng-click="openPanel('Corporate collaboration')">Corporate collaboration</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Intelligence'}" ng-click="openPanel('Intelligence')">Intelligence</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Corporations'}" ng-click="openPanel('Corporations')">Corporations</button>
+          <!-- <button type="button" class="btn btn-default" ng-click="openPanel('Mass')">Mass</button> -->
+          <!-- <button type="button" class="btn btn-default" ng-click="openPanel('Targeted')">Targeted</button> -->
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-hide="infoBox">
     <datamap map="mapObject" on-click="updateActiveGeography"></datamap>
 </div>
-
+<div class="country-details" ng-show="infoBox">
+    <div class="row">
+        <h1>{{ selectedCountry }}</h1>
+    </div>
+    <div class="row revelation" ng-repeat="data in geoData" ng-init="enabled = false">
+        <h4>{{ data["Revelations"] }}
+            <span ng-click="enabled = enabled ? false : true" class="label label-default"><i class="glyphicon glyphicon-plus-sign"></i></span></h4>
+        <div class="well details" ng-show="enabled" >
+            <div class="item" ng-if="['Revelations', 'Countries'].indexOf(key) == -1" ng-repeat="(key, value) in data">
+                <h4>{{key}}</h4>
+                <p>{{value}}</p>
+            </div>
+        </div>
+    </div>
+</div>

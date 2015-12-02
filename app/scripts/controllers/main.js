@@ -8,7 +8,8 @@
  * Controller of the cloakAndDaggerApp
  */
 angular.module('cloakAndDaggerApp')
-  .controller('MainCtrl', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+  .controller('MainCtrl', ['$scope', '$rootScope', '$http',
+              function ($scope, $rootScope, $http) {
     var countryMapping = {},
         csvToCategory = {
             "Leaders": 'data/Politicians-processed.csv',
@@ -17,21 +18,21 @@ angular.module('cloakAndDaggerApp')
             "Corporations": 'data/Corporations-processed.csv',
             "Mass": 'data/PubMASS-processed.csv',
             "Targeted": 'data/PubTARGETED-processed.csv'
-        }
+    };
     function loadMap(category) {
         $http.get(csvToCategory[category]).then(function(response) {
             var countryColors = {};
             angular.forEach(d3.csv.parse(response.data), function(row) {
-                angular.forEach(row["Countries"].split(","), function(country) {
+                angular.forEach(row['Countries'].split(","), function(country) {
                     country = country.replace(/^\s+/g, '');
-                    if (typeof countryMapping[country] == 'undefined') {
+                    if (typeof countryMapping[country] === 'undefined') {
                         countryMapping[country] = [];
                     }
                     if (country.match(/^[A-Z]+$/)) {
                         countryMapping[country].push(row);
                         countryColors[country] = {
                             "fillKey": "EXISTS"
-                        }
+                        };
                     }
                 });
             });
@@ -46,8 +47,8 @@ angular.module('cloakAndDaggerApp')
                     'defaultFill': '#DDDDDD'
                 },
                 data: countryColors
-            }
-        })
+            };
+        });
     }
 
     $scope.infoBox = false;
@@ -56,12 +57,13 @@ angular.module('cloakAndDaggerApp')
         $scope.selectedCategory = category;
         $scope.infoBox = false;
         loadMap(category);
-    }
+    };
 
     $scope.updateActiveGeography = function(geo) {
+        $scope.selectedCountry = geo.properties.name;
         $scope.infoBox = true;
         $scope.geoData = countryMapping[geo.id];
         $scope.$apply();
-    }
+    };
     $scope.openPanel("Leaders");
   }]);
