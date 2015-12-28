@@ -150,7 +150,11 @@ module.exports = function (grunt) {
         src: ['test/spec/{,*/}*.js']
       }
     },
+
     sass: {
+        options: {
+            sourceMap: true,
+        },
         dist: {
             files: {
                 '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/main.scss'
@@ -281,15 +285,15 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -387,6 +391,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
+            'styles/*.css',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -434,6 +439,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'sass',
+      'postcss:server',
       'connect:livereload',
       'watch'
     ]);
@@ -457,11 +463,12 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'sass',
+    'postcss',
     'ngtemplates',
     'concat',
     'ngAnnotate',
+    'copy:styles',
     'copy:dist',
-    //'cdnify',
     'cssmin',
     'uglify',
     'filerev',
