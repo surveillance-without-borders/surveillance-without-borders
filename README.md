@@ -27,6 +27,8 @@ Furthermore, Surveillance without Borders illustrates the following fields of da
 * Types of data collected
 * Data collection sources
 
+View Surveillance without Borders here: http://surveillancewithoutborders.com/#/
+
 ## Why is Surveillance without Borders being developed?
 
 The Snowden revelations provide a goldmine in terms of understanding the politics behind surveillance and how and why it is being carried out globally. However, the huge amount of documents which have been leaked (and which continue to be leaked) are quite overwhelming, thus potentially limiting the ability to correlate revelations contextually, to raise questions and to take action. Surveillance without Borders was developed in an attempt to address this problem. 
