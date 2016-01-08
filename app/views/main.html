@@ -1,4 +1,4 @@
-<div class="row info-box" ng-hide="infoBox" ng-switch="selectedCategory">
+<div class="row info-box" ng-switch="selectedCategory">
     <div ng-switch-when="Leaders">
         <h4>Political leaders under surveillance</h4>
         <p>This section illustrates the politics of surveillance through which some countries have had unequal political advantage in global affairs and negotiations.</p>
@@ -63,14 +63,14 @@
         </div>
     </div>
 </div>
-<div class="row" ng-hide="infoBox">
+<div class="row">
     <datamap map="mapObject" on-click="updateActiveGeography"></datamap>
 </div>
-<div class="country-details" ng-show="infoBox">
+<div class="country-details" ng-show="selectedCountry" id="details">
     <div class="row">
-        <h1>{{ selectedCountry }}</h1>
+        <h1>{{ selectedCountry.name }}</h1>
     </div>
-    <div class="row revelation" ng-repeat="data in geoData" ng-init="enabled = false">
+    <div class="row revelation" ng-repeat="data in countryData" ng-init="enabled = false">
         <h4>{{ data["Revelations"] }}
             <span ng-click="enabled = enabled ? false : true" class="label label-default"><i class="glyphicon glyphicon-plus-sign"></i></span></h4>
         <div class="well details" ng-show="enabled" >
