@@ -21,6 +21,26 @@ body {
   padding-right: 15px;
 }
 
+.swb-heading {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.categories {
+  .btn {
+    background-color: #ddd;
+  }
+  .btn.active {
+    background-color: #eff;
+  }
+}
+
+.info-box {
+  h4 {
+    font-weight: 700;
+  }
+}
+
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
