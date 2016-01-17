@@ -44,6 +44,13 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         }
       },
+      css: {
+        files: ['<%= yeoman.app %>/styles/*.scss'],
+        tasks: ['sass'],
+        options: {
+            livereload: '<%= connect.options.livereload %>'
+        }
+      },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
