@@ -65,15 +65,22 @@
 <div class="row">
     <datamap map="mapObject" on-click="updateActiveGeography"></datamap>
 </div>
-<div class="country-details" ng-show="selectedCountry" id="details">
-    <div class="row">
-        <h1>{{ selectedCountry.name }}</h1>
+<div class="country-details" id="details">
+    <div ng-show="selectedCountry" >
+        <div class="row">
+            <h1>{{ selectedCountry.name }}</h1>
+        </div>
+        <div class="row" ng-if="!selectedRevelations">
+            <h4>No data</h4>
+        </div>
     </div>
-    <div class="row" ng-if="!countryData">
-        <h4>No data</h4>
+    <div ng-show="!selectedCountry">
+        <div class="row">
+            <h1>Revelations for {{ selectedCategory }}</h1>
+        </div>
     </div>
 
-    <div class="row revelation" ng-repeat="data in countryData" ng-init="enabled = false">
+    <div class="row revelation" ng-repeat="data in selectedRevelations" ng-init="enabled = false">
         <div class="row">
             <div ng-click="enabled = enabled ? false : true" class="revelation-expand">
                 <span ng-if="enabled !== true" class="label label-default">
