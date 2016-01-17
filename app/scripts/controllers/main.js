@@ -73,7 +73,9 @@ angular.module('cloakAndDaggerApp')
             if ($scope.selectedCountry) {
                 $scope.countryData = countryData[$scope.selectedCountry.id];
             }
-            cb();
+            if (cb !== undefined) {
+                cb();
+            }
         });
     }
 

@@ -43,7 +43,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -116,4 +115,17 @@ body {
 .category-value {
      margin-top: 10px;
      margin-bottom: 10px;
+}
+
+.country-details {
+     margin-bottom: 50px;
+}
+
+.revelation .label {
+    background-color: #0492BD;
+    margin-right: 10px;
+}
+
+.revelation .label:hover {
+    background-color: #05C5FF;
 }
