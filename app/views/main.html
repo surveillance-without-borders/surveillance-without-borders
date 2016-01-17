@@ -1,5 +1,6 @@
 <div class="row info-box" ng-switch="selectedCategory">
     <div ng-switch-when="Leaders">
+        <img src="/images/categories/political-leaders.png" class="category-image"/>
         <h4>Political leaders under surveillance</h4>
         <p>This section illustrates the politics of surveillance through which some countries have had unequal political advantage in global affairs and negotiations.</p>
 
@@ -72,11 +73,6 @@
         </div>
         <div class="row" ng-if="!selectedRevelations">
             <h4>No data</h4>
-        </div>
-    </div>
-    <div ng-show="!selectedCountry">
-        <div class="row">
-            <h1>Revelations for {{ selectedCategory }}</h1>
         </div>
     </div>
 
