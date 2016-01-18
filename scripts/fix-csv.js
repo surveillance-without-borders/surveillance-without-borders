@@ -68,11 +68,10 @@ function processCSV(filename, csv_parsed) {
             country = country.trim();
             country_codes.push(countryToCC(country));
         });
+        csv_parsed[i][1] = csv_parsed[i][1].replace("freesnowden.is", "edwardsnowden.com");
         csv_parsed[i][country_col_idx] = country_codes.join(",");
     }
     csv.stringify(csv_parsed, function(err, data){
-        //console.log(err);
-        //console.log(data);
         fs.writeFile(csv_directory + filename.replace('.csv', '-processed.csv'),
                      data, function(err){
             if (err) {

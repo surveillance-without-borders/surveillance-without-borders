@@ -20,13 +20,17 @@ angular.module('cloakAndDaggerApp')
     },
         countryMapping = {};
 
+    $scope.revelations = {};
+
     function loadCategoryData(category, cb) {
         if (typeof countryMapping[category] !== "undefined") {
             cb(countryMapping[category]);
         } else {
             countryMapping[category] = {};
+            $scope.revelations[category] = [];
             $http.get(csvToCategory[category]).then(function(response) {
                 angular.forEach(d3.csv.parse(response.data), function(row) {
+                    $scope.revelations[category].push(row);
                     angular.forEach(row['Countries'].split(","), function(country) {
                         country = country.replace(/^\s+/g, '');
                         if (typeof countryMapping[category][country] === 'undefined') {
@@ -71,9 +75,13 @@ angular.module('cloakAndDaggerApp')
                 };
             }
             if ($scope.selectedCountry) {
-                $scope.countryData = countryData[$scope.selectedCountry.id];
+                $scope.selectedRevelations = countryData[$scope.selectedCountry.id];
+            } else {
+                 $scope.selectedRevelations = $scope.revelations[category];
             }
-            cb();
+            if (cb !== undefined) {
+                cb();
+            }
         });
     }
 
@@ -83,10 +91,14 @@ angular.module('cloakAndDaggerApp')
     };
 
     $scope.updateActiveGeography = function(geo) {
-        $scope.selectedCountry = {
-            "name": geo.properties.name,
-            "id": geo.id
-        };
+        if ($scope.selectedCountry && geo.id === $scope.selectedCountry.id) {
+             delete $scope.selectedCountry;
+        } else {
+            $scope.selectedCountry = {
+                "name": geo.properties.name,
+                "id": geo.id
+            };
+        }
         loadCategory($scope.selectedCategory, function(){
             $scope.$apply();
             $anchorScroll('details');

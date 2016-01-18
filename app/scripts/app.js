@@ -22,13 +22,18 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        activetab: 'home'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        activetab: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .controller('NavbarCtrl', function($scope, $route) {
+      $scope.$route = $route;
   });

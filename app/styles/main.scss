@@ -43,7 +43,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -107,4 +106,50 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.category-name {
+     text-align: right;
+}
+
+.category-value {
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+.country-details {
+     margin-bottom: 50px;
+}
+
+.revelation-expand {
+    float: left;
+    width: 4%;
+    margin-top: 21px;
+
+     .label {
+        background-color: #0492BD;
+        margin-right: 10px;
+    }
+
+    .label:hover {
+        background-color: #05C5FF;
+    }
+}
+
+.revelation-title {
+    float: left;
+    width: 96%;
+}
+
+.revelation.row {
+    margin-bottom: 10px;
+}
+
+.category-image {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding: 20px 20px 40px 20px;
+    background-color: #e7e7e7;
+    float: right;
+    width: 330px;
 }
