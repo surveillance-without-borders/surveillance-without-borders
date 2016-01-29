@@ -90,6 +90,20 @@ angular.module('cloakAndDaggerApp')
         loadCategory(category);
     };
 
+    $scope.selectGlobal = function() {
+        if ($scope.selectedCountry && $scope.selectedCountry.id == 'GLB') {
+            delete $scope.selectedCountry;
+        } else {
+            $scope.selectedCountry = {
+                 "id": "GLB",
+                 "name": "Global"
+            }
+        }
+        loadCategory($scope.selectedCategory, function(){
+            $anchorScroll('details');
+        });
+    }
+
     $scope.updateActiveGeography = function(geo) {
         if ($scope.selectedCountry && geo.id === $scope.selectedCountry.id) {
              delete $scope.selectedCountry;

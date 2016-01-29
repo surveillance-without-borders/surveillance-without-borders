@@ -153,3 +153,13 @@ body {
     float: right;
     width: 330px;
 }
+
+.map-wrapper {
+     position: relative;
+
+     .global-button {
+         position: absolute;
+         top: 140px;
+         z-index: 999999;
+     }
+}
