@@ -37,17 +37,19 @@
         As illustrated by the Snowden revelations, intelligence agencies have exploited the networks of telecom service providers and have even tapped into the communication links between the data centres of some of the most major Internet companies.
         </p>
     </div>
-    <!--
-    These are currently disabled. If you are interested in making them a reality please contribute :)
     <div ng-switch-when="Mass">
         <h4>Mass surveillance of citizens</h4>
-        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+        <img src="/images/categories/mass-surveillance.png" class="category-image"/>
+        <p>While governments and intelligence agencies justify surveillance on the grounds of detecting and preventing crime and terror, the documents leaked by Snowden reveal that they follow a “collect it all” strategy which involves the indiscriminate bulk collection of most communications.</p>
+        <p>
+        This includes the collection of millions of Yahoo web cam images,  the real time monitoring of users' activity on popular social media platforms – such as Facebook, Twitter, Blogger and YouTube – and the monitoring of “nearly everything a user does on the internet”. Unfortunately, “ordinary” law-abiding citizens around the world are not immune to intelligence agencies' prying eyes.</p>
     </div>
     <div ng-switch-when="Targeted">
+        <img src="/images/categories/targetted-surveillance.png" class="category-image"/>
         <h4>Targeted surveillance of citizens</h4>
-        <p>Bacon ipsum dolor amet swine cupim ground round landjaeger prosciutto salami fatback drumstick hamburger sirloin turkey beef ribs pork loin. Hamburger capicola short loin, pork chop tail short ribs shoulder meatloaf venison pig. Sirloin pastrami beef ribs cupim, tenderloin bacon pork chop capicola pork belly shoulder jerky. Flank swine short ribs, meatloaf capicola shoulder doner corned beef hamburger landjaeger.</p>
+        <p>In addition to spying on political leaders and corporations around the world, the documents leaked by Snowden reveal that intelligence agencies have also targeted the communications of various non-governmental organisations (NGOs), such as Amnesty International and Doctors without Borders. Other groups which have also been targeted include system administrators, hacktivists, media organizations, Pirate Bay website staff and visitors, and even online gamers.</p>
+        <p>The leaked documents reveal that intelligence agencies have gone as far as exploiting thousands of networks around the world by infecting them with malware and by adding backdoors to computer network devices, such as routers and servers. They have also attempted to crack crypto and to exploit VPNs and anonymity software. </p>
         </div>
-    -->
     <p>
     Select a country in the map below to learn more.
     </p>
@@ -59,14 +61,15 @@
         <div class="btn-group" role="group" aria-label="...">
           <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Leaders'}" ng-click="openPanel('Leaders')">Leaders</button>
           <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Corporate collaboration'}" ng-click="openPanel('Corporate collaboration')">Corporate collaboration</button>
-          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Intelligence'}" ng-click="openPanel('Intelligence')">Intelligence</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Intelligence'}" ng-click="openPanel('Intelligence')">Intelligence collaboration</button>
           <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Corporations'}" ng-click="openPanel('Corporations')">Corporations</button>
-          <!-- <button type="button" class="btn btn-default" ng-click="openPanel('Mass')">Mass</button> -->
-          <!-- <button type="button" class="btn btn-default" ng-click="openPanel('Targeted')">Targeted</button> -->
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Mass'}" ng-click="openPanel('Mass')">Mass</button>
+          <button type="button" class="btn btn-default" ng-class="{'active': selectedCategory == 'Targeted'}" ng-click="openPanel('Targeted')">Targeted</button>
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row map-wrapper">
+    <button type="button" class="btn btn-default global-button" ng-class="{'active': selectedCountry.id == 'GLB'}" ng-click="selectGlobal()">Global</button>
     <datamap map="mapObject" on-click="updateActiveGeography"></datamap>
 </div>
 <div class="country-details" id="details">
