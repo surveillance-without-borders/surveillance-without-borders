@@ -21,18 +21,43 @@ body {
   padding-right: 15px;
 }
 
-.swb-heading {
-  font-size: 24px;
-  font-weight: 900;
+.navbar-black {
+    background-color: #111;
+
+    a {
+        color: #eee;
+    }
+
+    li.active a {
+        background-color: #444;
+    }
+
+    li a:hover {
+        background-color: #444;
+    }
+
+    .swb-heading {
+      font-size: 24px;
+      font-weight: 900;
+    }
 }
 
 .categories {
   .btn {
-    background-color: #ddd;
+    background-color: #111;
+    color: #ddd;
+    border-color: #000;
   }
-  .btn.active {
-    background-color: #eff;
+
+  .btn.active,
+  .btn:active {
+    background-color: #444;
+    color: #ddd;
+    border-color: #000;
+    -webkit-box-shadow: inset 0 3px 5px #666;
+    box-shadow: inset 0 3px 5px #666;
   }
+
 }
 
 .info-box {
@@ -149,9 +174,11 @@ body {
     margin-left: 40px;
     margin-bottom: 40px;
     padding: 20px 20px 40px 20px;
-    background-color: #e7e7e7;
+    background-color: #fff;
     float: right;
     width: 330px;
+    height: 280px;
+    border: 1px solid #111;
 }
 
 .map-wrapper {
