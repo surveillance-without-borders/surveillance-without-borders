@@ -178,15 +178,27 @@ body {
     float: right;
     width: 330px;
     height: 280px;
-    border: 1px solid #111;
 }
 
 .map-wrapper {
-     position: relative;
+    position: relative;
 
-     .global-button {
-         position: absolute;
-         top: 140px;
-         z-index: 999999;
-     }
+    .global-button {
+        position: absolute;
+        top: 140px;
+        z-index: 999999;
+        background-color: #67C378;
+        color: #fff;
+        border: none;
+        border-radius: 80px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .global-button.active,
+    .global-button:active {
+        background-color: #704279;
+        color: #fff;
+    }
+
 }
