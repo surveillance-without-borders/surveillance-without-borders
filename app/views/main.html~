@@ -22,32 +22,32 @@
     <div ng-switch-when="Intelligence">
         <img src="/images/categories/collaboration-intelligence.png" class="category-image"/>
         <h4>Collaboration between intelligence agencies</h4>
-        <p>This section illustrates some of the collaborations between intelligence agencies around the world.</p>
+        <p>The NSA is not alone in the global spying game. It collaborates closely with various other intelligence agencies around the world which provide it direct access to networks, infrastructure and databases. And in some cases, other intelligence agencies spy for the NSA, in exchange for access to data and other benefits.</p>
 
-        <p>As illustrated by the Snowden revelations, such collaborations have targeted the communications of flight passengers, online gamers, corporations, law firms, government representatives and in some cases, the public at large. </p>
+        <p>Surveillance carried out by collaborations between intelligence agencies have targeted the communications of government representatives and firms around the world. Together, intelligence agencies have exploited the internet's infrastructure, gaining indiscriminate access to citizens communications in certain cases.</p>
 
     </div>
     <div ng-switch-when="Corporations">
         <img src="/images/categories/corporations.png" class="category-image"/>
         <h4>Corporations under surveillance</h4>
         <p>
-        This section illustrates some of the companies that have been targeted by intelligence agencies around the world.
+        Companies around the world have been targeted by intelligence agencies. This includes some of the most commonly used internet companies, such as Google, Microsoft and Facebook, as well as telecom service providers, security companies and even oil firms.  
         </p>
         <p>
-        As illustrated by the Snowden revelations, intelligence agencies have exploited the networks of telecom service providers and have even tapped into the communication links between the data centres of some of the most major Internet companies.
+        Such surveillance has been carried out to provide US firms a competitive advantage, to gain direct access to citizens communications and other personal information, as well as to spy on political leaders who rely on certain network infrastructure provided by companies. 
         </p>
     </div>
     <div ng-switch-when="Mass">
         <h4>Mass surveillance of citizens</h4>
         <img src="/images/categories/mass-surveillance.png" class="category-image"/>
         <p>Almost all of our communications, worldwide, are routinely being collected and analysed, according to the Snowden revelations. Unfortunately, “ordinary” law-abiding citizens around the world are not immune to intelligence agencies' prying eyes.</p>
-        <p>While governments and intelligence agencies justify surveillance on the grounds of detecting and preventing crime and terror, the documents leaked by Snowden reveal that they follow a “collect it all” strategy which involves the indiscriminate bulk collection of most communications. This includes millions of **Yahoo web cam images**,  the real time monitoring of users' activity on popular social media platforms – such as **Facebook**, **Twitter**, **Blogger** and **YouTube** – and the monitoring of “nearly everything a user does on the internet”.</p>
+        <p>While governments and intelligence agencies justify surveillance on the grounds of detecting and preventing crime and terror, the documents leaked by Snowden reveal that they follow a “collect it all” strategy which involves the indiscriminate bulk collection of most communications. This includes millions of Yahoo web cam images,  the real time monitoring of users' activity on popular social media platforms – such as Facebook, Twitter, Blogger and YouTube – and the monitoring of “nearly everything a user does on the internet”.</p>
     </div>
     <div ng-switch-when="Targeted">
         <img src="/images/categories/targeted-surveillance.png" class="category-image"/>
         <h4>Targeted surveillance of citizens</h4>
         <p>Tens of thousands of computer networks have been infected with malware by the NSA. Backdoors have been added to computer network devices, such as routers and servers, and attempts to crack crypto and to exploit VPNs and anonymity software have been carried out.</p>
-        <p>Cyber attacks have not only targeted suspect terrorists, but also non-profit organisations - such as France's Doctors of the World - system administrators, hacktivists, media organizations, Pirate Bay website staff and visitors, and even online gamers.</p>
+        <p>Cyber attacks have not only targeted suspect terrorists, but also non-profit organisations - such as France's Doctors of the World - system administrators, hacktivists, media organizations and even online gamers.</p>
         </div>
     <p>
     Select a country in the map below to learn more.
