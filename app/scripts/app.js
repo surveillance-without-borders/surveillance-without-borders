@@ -27,8 +27,23 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
+        controller: 'PageCtrl',
         activetab: 'about'
+      })
+      .when('/what-now', {
+        templateUrl: 'views/what-now.html',
+        controller: 'PageCtrl',
+        activetab: 'what-now'
+      })
+      .when('/contribute', {
+        templateUrl: 'views/contribute.html',
+        controller: 'PageCtrl',
+        activetab: 'contribute'
+      })
+      .when('/art', {
+        templateUrl: 'views/art.html',
+        controller: 'PageCtrl',
+        activetab: 'art'
       })
       .otherwise({
         redirectTo: '/'

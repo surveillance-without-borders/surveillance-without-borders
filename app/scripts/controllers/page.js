@@ -8,5 +8,5 @@
  * Controller of the cloakAndDaggerApp
  */
 angular.module('cloakAndDaggerApp')
-  .controller('AboutCtrl', ['$scope', function ($scope) {
+  .controller('PageCtrl', ['$scope', function ($scope) {
 }]);
