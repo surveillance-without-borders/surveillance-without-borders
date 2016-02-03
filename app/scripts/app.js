@@ -45,11 +45,6 @@ angular
         controller: 'PageCtrl',
         activetab: 'art'
       })
-      .when('/highlights', {
-        templateUrl: 'views/highlights.html',
-        controller: 'PageCtrl',
-        activetab: 'highlights'
-      })
       .otherwise({
         redirectTo: '/'
       });
