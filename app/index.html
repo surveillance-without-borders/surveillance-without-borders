@@ -39,6 +39,9 @@
               <ul class="nav navbar-nav">
                 <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#/">Home</a></li>
                 <li ng-class="{active: $route.current.activetab == 'about'}"><a ng-href="#/about">About</a></li>
+                <li ng-class="{active: $route.current.activetab == 'art'}"><a ng-href="#/art">Art</a></li>
+                <li ng-class="{active: $route.current.activetab == 'contribute'}"><a ng-href="#/contribute">Contribute</a></li>
+                <li ng-class="{active: $route.current.activetab == 'what-now'}"><a ng-href="#/what-now">What now</a></li>
             </ul>
           </div>
         </div>
@@ -77,7 +80,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/page.js"></script>
         <!-- endbuild -->
 </body>
 </html>
