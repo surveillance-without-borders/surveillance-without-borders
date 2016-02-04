@@ -44,7 +44,7 @@ angular
         templateUrl: 'views/art.html',
         controller: 'PageCtrl',
         activetab: 'art'
-     })   
+      })
       .otherwise({
         redirectTo: '/'
       });
