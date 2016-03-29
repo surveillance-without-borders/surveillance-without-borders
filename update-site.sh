@@ -1,4 +1,3 @@
 #!/bin/sh
 grunt build
-echo surveillancewithoutborders.com > dist/CNAME
-ghp-import -p dist/
+rsync -aP dist/ surveillancewithoutborders.com:/var/www/surveillancewithoutborders.com
